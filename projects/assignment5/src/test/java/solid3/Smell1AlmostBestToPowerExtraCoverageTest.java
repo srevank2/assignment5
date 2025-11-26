@@ -6,20 +6,20 @@ import org.junit.jupiter.api.Assertions;
 public class Smell1AlmostBestToPowerExtraCoverageTest {
 
     @Test
-    public void testInfinityValues() {
-        double r = Smell1AlmostBest.toPower(Double.POSITIVE_INFINITY, 2);
-        Assertions.assertTrue(Double.isInfinite(r));
+    public void testInfinityBaseEvenExponent() {
+        double result = Smell1AlmostBest.toPower(Double.POSITIVE_INFINITY, 2);
+        Assertions.assertTrue(Double.isInfinite(result));
     }
 
     @Test
-    public void testNegativeInfinity() {
-        double r = Smell1AlmostBest.toPower(Double.NEGATIVE_INFINITY, 3);
-        Assertions.assertTrue(Double.isInfinite(r));
+    public void testInfinityBaseOddExponent() {
+        double result = Smell1AlmostBest.toPower(Double.NEGATIVE_INFINITY, 3);
+        Assertions.assertTrue(Double.isInfinite(result));
     }
 
     @Test
-    public void testVeryLargeExponent() {
-        double r = Smell1AlmostBest.toPower(1.000001, 2000);
-        Assertions.assertTrue(Double.isFinite(r) || Double.isInfinite(r));
+    public void testVeryLargePositiveExponent() {
+        double result = Smell1AlmostBest.toPower(1.0001, 5000);
+        Assertions.assertTrue(Double.isFinite(result) || Double.isInfinite(result));
     }
 }
