@@ -1,0 +1,10 @@
+Part2-a (manual review of IPower.java) - timestamped commit:
+- Issue: method computePower uses magic numbers and no overflow checks -> recommend document behaviour or use long/BigInteger.
+- Issue: method names unclear (powCalc -> toPower), recommend clearer naming and JavaDoc.
+- Issue: public static mutable fields (if present) -> make private + accessor or make immutable.
+- Issue: high cyclomatic complexity in method X (refactor: extract helper methods).
+- Issue: missing null-checks for inputs -> add guards or document preconditions.
+- Recommended fixes: add JavaDoc, replace magic numbers with constants, reduce method complexity, handle overflow or document limits, encapsulate fields.
+
+PART1-A=<5b6b3b903edcae02cb0aa65392ceeb489fdc3a28>
+PART1-B=<bef53f0ddb9b63d390a53c61aed5da455f84c4d8>
